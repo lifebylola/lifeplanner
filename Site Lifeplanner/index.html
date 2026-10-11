@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Life Planner 2027 | O segundo cérebro da mulher ambiciosa</title>
+<meta name="description" content="O Notion pronto que organiza sua rotina, estudos, treinos, finanças e metas para 2027. Pagamento único, acesso vitalício, bônus incluídos.">
+<meta property="og:title" content="Life Planner 2027 — o segundo cérebro da mulher ambiciosa">
+<meta property="og:description" content="Rotina, estudos, saúde, finanças e metas em um só lugar. Acesso vitalício.">
+<meta name="theme-color" content="#44130f">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500;1,700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --wine:#44130f;
+  --wine-deep:#2a0907;
+  --wine-bright:#6d1c18;
+  --tan:#aa8f78;
+  --tan-soft:#d8c2ad;
+  --rose:#e6bfb3;
+  --grey:#f0ebe6;
+  --cream:#fbf8f5;
+  --black:#111111;
+  --green:#2f7d46;
+  --green-dark:#256338;
+  --green-hi:#8ee08a;
+  --gold:#d9b57a;
+  --ink:#241512;
+  --serif:"Playfair Display","Georgia",serif;
+  --sans:"Montserrat","Helvetica Neue",Arial,sans-serif;
+  --safe-t:env(safe-area-inset-top,0px);
+  --safe-b:env(safe-area-inset-bottom,0px);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--sans);font-weight:500;font-size:17px;line-height:1.6;color:var(--ink);background:var(--cream);overflow-x:hidden;text-align:center;padding-bottom:calc(86px + var(--safe-b))}
+img,video{max-width:100%;display:block}
+a{color:inherit}
+p{margin-inline:auto;max-width:56ch}
+.wrap{width:min(1040px,100% - 40px);margin-inline:auto}
+.narrow{width:min(720px,100% - 40px);margin-inline:auto}
+.sprite{position:absolute;width:0;height:0;overflow:hidden}
+
+/* ---------- tipografia limpa e moderna ---------- */
+h1,h2,h3{font-family:var(--sans);font-weight:800;line-height:1.12;letter-spacing:-.01em}
+h1{font-size:clamp(32px,8vw,58px)}
+h2{font-size:clamp(26px,6vw,46px)}
+h3{font-size:clamp(20px,4.2vw,26px);line-height:1.2}
+.lt{font-weight:500;color:var(--tan)}
+.serif{font-family:var(--serif);font-weight:600;letter-spacing:0;font-style:italic}
+.caps{text-transform:uppercase;letter-spacing:.02em}
+.lead{font-size:clamp(17px,3.6vw,20px);font-weight:500}
+.hl{background:var(--tan);color:var(--wine-deep);padding:.02em .35em;border-radius:6px}
+
+/* ---------- ticker ---------- */
+.ticker{position:sticky;top:0;z-index:60;background:var(--wine-deep);color:var(--cream);overflow:hidden;padding-top:var(--safe-t);border-bottom:2px solid var(--tan)}
+.ticker-track{display:flex;width:max-content;animation:scroll 38s linear infinite;align-items:center}
+.ticker:hover .ticker-track{animation-play-state:paused}
+.ticker-item{padding:11px 0;font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap;display:flex;align-items:center}
+.ticker-item b{color:var(--green-hi);font-weight:800}
+.ticker-item s{opacity:.65}
+.star{display:inline-block;width:12px;height:12px;background:var(--tan);clip-path:polygon(50% 0,61% 39%,100% 50%,61% 61%,50% 100%,39% 61%,0 50%,39% 39%);margin:0 24px;flex:none}
+@keyframes scroll{to{transform:translateX(-50%)}}
+
+/* ---------- botões fluidos com micro-interações ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;font:800 16px/1.15 var(--sans);letter-spacing:.03em;text-transform:uppercase;text-decoration:none;text-align:center;padding:20px 34px;border-radius:999px;border:0;cursor:pointer;background:var(--green);color:#fff;transition:transform .25s cubic-bezier(.175,.885,.32,1.275),background .2s ease,box-shadow .2s ease;min-height:60px;box-shadow:0 8px 0 -2px var(--green-dark),0 16px 28px -10px rgba(0,0,0,.4)}
+.btn:hover{background:#368f51;transform:translateY(-3px) scale(1.01)}
+.btn:active{transform:translateY(2px);box-shadow:0 3px 0 -2px var(--green-dark)}
+.btn:focus-visible,summary:focus-visible,.tab:focus-visible{outline:3px solid var(--gold);outline-offset:4px}
+.btn.wine{background:var(--wine);box-shadow:0 8px 0 -2px var(--wine-deep),0 16px 28px -10px rgba(0,0,0,.4)}
+.btn.wine:hover{background:var(--wine-bright)}
+.btn .arrow{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,.2);font-size:16px;transition:transform .25s}
+.btn:hover .arrow{transform:translateX(5px)}
+.btn.pulse{animation:pulse 2.8s ease-in-out infinite}
+@keyframes pulse{0%,100%{box-shadow:0 8px 0 -2px var(--green-dark),0 0 0 0 rgba(142,224,138,.4)}60%{box-shadow:0 8px 0 -2px var(--green-dark),0 0 0 16px rgba(142,224,138,0)}}
+.micro{font-size:13px;font-weight:600;margin-top:16px;opacity:.85}
+
+/* ---------- seções e cards ---------- */
+section{padding:clamp(64px,10vw,120px) 0 clamp(76px,11vw,130px);position:relative;overflow:hidden}
+.s-cream{background:var(--cream);color:var(--wine)}
+.s-grey{background:var(--grey);color:var(--wine)}
+.s-wine{background:var(--wine);color:var(--cream)}
+.s-deep{background:var(--wine-deep);color:var(--cream)}
+.s-black{background:var(--black);color:var(--cream)}
+.s-tan{background:var(--tan);color:var(--wine-deep)}
+.s-tan .lt{color:var(--wine)}
+.s-wine p,.s-deep p,.s-black p{color:rgba(255,255,255,.9)}
+.s-cream p,.s-grey p{color:#3d2a25}
+.sec-head{margin-bottom:clamp(32px,5vw,56px)}
+.sec-head h2{margin-bottom:18px}
+.pill{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:8px 18px;border-radius:999px;background:var(--wine);color:var(--cream);margin-bottom:20px;box-shadow:0 4px 12px rgba(0,0,0,.08)}
+.s-wine .pill,.s-deep .pill,.s-black .pill{background:var(--tan);color:var(--wine-deep)}
+.s-tan .pill{background:var(--wine);color:var(--cream)}
+.wave{position:absolute;left:0;bottom:-1px;width:100%;height:clamp(24px,4vw,48px);display:block;pointer-events:none}
+.blob{position:absolute;border-radius:50%;pointer-events:none;z-index:0;filter:blur(40px)}
+.wrap,.narrow{position:relative;z-index:1}
+
+/* ---------- mídia 9:16 com glassmorphism ---------- */
+.media{position:relative;overflow:hidden;aspect-ratio:9/16;width:min(100%,var(--mw,240px));margin-inline:auto;border-radius:24px;background:rgba(255,255,255,0.03);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.15);display:grid;place-items:center;color:var(--wine);box-shadow:0 20px 40px -15px rgba(0,0,0,.15);transition:transform .3s ease}
+.media:hover{transform:translateY(-4px)}
+.media.arch{border-radius:999px 999px 24px 24px}
+.media.filled{border:0;background:#000}
+.media.filled video,.media.filled img,.media.filled iframe{width:100%;height:100%;object-fit:cover;border:0}
+.media .ph{padding:20px 14px;max-width:26ch}
+.media .ph b{display:block;font-weight:800;font-size:16px;line-height:1.2;margin-bottom:6px}
+.media .ph span{display:block;font-size:12px;line-height:1.4;font-weight:500;opacity:.8}
+.phone{width:min(100%,var(--mw,240px));margin-inline:auto;border-radius:40px;border:8px solid #1a1412;background:#1a1412;box-shadow:0 25px 50px -15px rgba(0,0,0,.5);position:relative}
+.phone::before{content:"";position:absolute;top:6px;left:50%;transform:translateX(-50%);width:32%;height:14px;background:#1a1412;border-radius:0 0 10px 10px;z-index:3}
+.phone .media{width:100%;border-radius:32px;border:0}
+
+/* ---------- hero ---------- */
+.hero{background:var(--grey);color:var(--wine);padding-top:clamp(36px,6vw,72px)}
+.hero h1{margin-bottom:22px}
+.hero h1 .ln{display:block;overflow:hidden;padding:.04em 0}
+.hero h1 .ln>span{display:block;transform:translateY(110%);animation:rise .8s cubic-bezier(.2,.7,.2,1) forwards;animation-delay:calc(.1s + var(--i) * .1s)}
+@keyframes rise{to{transform:none}}
+.hero h1 .serif{font-size:1.15em;color:var(--wine-bright)}
+.hero .lead{margin-bottom:28px}
+.hero-price{display:flex;justify-content:center;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:20px}
+.hero-price s{font-size:18px;opacity:.6;font-weight:600}
+.hero-price strong{font-size:clamp(42px,10vw,60px);font-weight:900;line-height:1;color:var(--wine)}
+.hero-price small{width:100%;font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--wine-bright)}
+.chips{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:24px}
+.chip{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;padding:8px 16px;border-radius:999px;background:#fff;color:var(--wine);border:1px solid rgba(68,19,15,.15);box-shadow:0 4px 12px rgba(0,0,0,.03)}
+.chip svg{width:16px;height:16px;flex:none;color:var(--green)}
+.hero-art{position:relative;margin-top:clamp(80px,14vw,120px);display:flex;justify-content:center;align-items:flex-end;gap:clamp(8px,2.2vw,22px);padding-bottom:60px}
+.hero-art::before{content:"";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(480px,108%);aspect-ratio:1;border-radius:50%;background:rgba(68,19,15,0.06);z-index:0}
+.hero-art>*{position:relative;z-index:1}
+.hero-art .side{--mw:105px;align-self:flex-end}
+.hero-art .side:first-child{transform:rotate(-5deg) translateY(-8px)}
+.hero-art .side:last-child{transform:rotate(5deg) translateY(-8px)}
+.hero-art .phone{--mw:190px}
+.hero-art .side .ph{padding:6px}
+.hero-art .side .ph span{display:none}
+.hero-art .side .ph b{font-size:12px}
+@media(min-width:700px){.hero-art .side{--mw:160px}.hero-art .phone{--mw:230px}}
+.seal-off{position:absolute;z-index:4;right:clamp(0px,3vw,50px);top:-20px;width:96px;height:96px;border-radius:50%;background:var(--green);color:#fff;display:grid;place-items:center;transform:rotate(10deg);box-shadow:0 10px 20px -6px rgba(0,0,0,.4);border:2px dashed rgba(255,255,255,.8);line-height:1;font-weight:900}
+.seal-off b{font-size:28px;display:block}
+.seal-off span{font-size:11px;letter-spacing:.1em}
+
+/* ---------- dor / transformação para 2027 ---------- */
+.pain-grid{display:grid;gap:14px;max-width:640px;margin-inline:auto}
+@media(min-width:900px){.pain-grid{grid-template-columns:1fr 1fr;max-width:none}}
+.pain{display:flex;flex-direction:column;align-items:center;gap:10px;background:var(--wine-bright);border-radius:24px;padding:22px;border:1px solid rgba(216,194,173,.2);box-shadow:0 10px 30px -10px rgba(0,0,0,.3)}
+.pain svg{width:26px;height:26px;color:var(--rose);flex:none}
+.pain p{font-size:17px;font-weight:600;color:var(--cream)!important}
+.pivot{margin:clamp(36px,6vw,64px) auto 0;max-width:740px;background:var(--tan);color:var(--wine-deep);border-radius:36px;padding:clamp(28px,5vw,48px) clamp(22px,4vw,44px);box-shadow:10px 10px 0 var(--black)}
+.pivot h3{font-size:clamp(24px,5vw,38px);margin-bottom:12px}
+.pivot p{color:var(--wine-deep)!important;font-size:18px;font-weight:600}
+
+/* ---------- pilares (abas interativas) ---------- */
+.tabs{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-bottom:30px}
+.tab{font:700 14px/1 var(--sans);padding:14px 20px;border-radius:999px;border:2px solid var(--wine);background:#fff;color:var(--wine);cursor:pointer;transition:all .2s ease;min-height:48px;box-shadow:0 4px 12px rgba(0,0,0,.03)}
+.tab:hover{transform:translateY(-2px);background:var(--grey)}
+.tab[aria-selected="true"]{background:var(--wine);color:var(--cream);box-shadow:0 6px 16px rgba(68,19,15,.3)}
+.panel{display:none;gap:30px;align-items:center;justify-items:center;background:var(--tan);border-radius:36px;padding:clamp(26px,5vw,48px) clamp(20px,4vw,40px);box-shadow:10px 10px 0 var(--wine)}
+.panel.on{display:grid;animation:panelIn .4s cubic-bezier(.16,1,.3,1) both}
+@media(min-width:860px){.panel.on{grid-template-columns:1fr 1fr;gap:44px}}
+@keyframes panelIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.panel .pill{margin-bottom:14px}
+.panel h3{margin-bottom:12px;color:var(--wine-deep)}
+.panel p{color:var(--wine-deep)!important;font-weight:600}
+.panel ul{list-style:none;margin-top:20px;display:grid;gap:10px;justify-items:center}
+.panel li{display:flex;gap:10px;align-items:center;justify-content:center;text-align:left;font-weight:700;color:var(--wine-deep);font-size:16px}
+.ck{width:24px;height:24px;flex:none}
+.panel .media{--mw:220px}
+
+/* ---------- antes x depois ---------- */
+.vs{display:grid;gap:20px;max-width:960px;margin-inline:auto}
+@media(min-width:860px){.vs{grid-template-columns:1fr 1fr;gap:26px}}
+.vs-card{border-radius:34px;padding:clamp(26px,4vw,40px) clamp(20px,3.5vw,32px)}
+.vs-card h3{margin-bottom:18px;font-size:clamp(20px,4.5vw,28px)}
+.vs-card ul{list-style:none;display:grid;gap:12px;justify-items:center}
+.vs-card li{display:flex;gap:12px;align-items:center;justify-content:center;text-align:left;font-weight:600;font-size:16px}
+.vs-card li svg{width:24px;height:24px;flex:none}
+.vs-bad{background:#161616;border:1px solid #333;color:#cfc6bf}
+.vs-bad h3{color:var(--rose)}
+.vs-bad li svg{color:#d9534f}
+.vs-good{background:var(--green);color:#fff;transform:rotate(-1deg);box-shadow:8px 8px 0 var(--gold)}
+@media(max-width:859px){.vs-good{transform:none}}
+.vs-good h3{color:#fff}
+
+/* ---------- tour ---------- */
+.tour-row{display:flex;justify-content:center;align-items:center;gap:clamp(10px,2.5vw,30px)}
+.tour-row .side{--mw:110px}
+.tour-row .main{--mw:230px}
+@media(min-width:700px){.tour-row .side{--mw:190px}.tour-row .main{--mw:280px}}
+.tour-row .side:first-child{transform:rotate(-4deg)}
+.tour-row .side:last-child{transform:rotate(4deg)}
+.tour-row .side .ph span{display:none}
+.tour-row .side .ph b{font-size:12px}
+
+/* ---------- provas sociais ---------- */
+.proof-grid{display:grid;gap:20px;max-width:640px;margin-inline:auto}
+@media(min-width:960px){.proof-grid{grid-template-columns:repeat(3,1fr);max-width:none}}
+.quote{background:var(--cream);color:var(--wine);border-radius:30px;padding:30px 24px;display:flex;flex-direction:column;align-items:center;gap:14px;box-shadow:8px 8px 0 var(--wine)}
+.quote:nth-child(2){background:#fff;transform:rotate(1deg)}
+.quote .mark{font-family:var(--serif);font-size:60px;line-height:.5;color:var(--tan)}
+.quote blockquote{font-size:17px;font-weight:600;line-height:1.5;color:var(--wine-deep)}
+.quote cite{font-style:normal;font-size:12px;font-weight:700;letter-spacing:.04em;opacity:.7}
+.quote .result{margin-top:auto;display:inline-block;font-size:12px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;background:var(--green);color:#fff;padding:8px 14px;border-radius:999px}
+.print-row{display:flex;justify-content:center;gap:clamp(8px,2vw,20px);margin-top:40px}
+.print-row .media{--mw:28%;border-radius:18px}
+.print-row .ph{padding:6px}
+.print-row .ph b{font-size:12px}
+
+/* ---------- como funciona ---------- */
+.steps{display:grid;gap:24px;max-width:600px;margin-inline:auto}
+@media(min-width:900px){.steps{grid-template-columns:repeat(3,1fr);max-width:none;gap:26px}}
+.step{background:#fff;border-radius:32px;padding:0 22px 28px;border:1px solid rgba(68,19,15,.2);margin-top:28px;box-shadow:0 10px 30px rgba(0,0,0,.04)}
+.step .n{width:56px;height:56px;border-radius:50%;background:var(--wine);color:var(--cream);font-size:24px;font-weight:900;display:grid;place-items:center;margin:-28px auto 16px;border:4px solid var(--grey);box-shadow:0 6px 16px rgba(0,0,0,.15)}
+.step h3{margin-bottom:8px}
+.step p{font-size:16px}
+
+/* ---------- o que tem dentro (módulos notion) ---------- */
+.inside{display:flex;flex-wrap:wrap;justify-content:center;gap:16px}
+.mod{flex:1 1 270px;max-width:320px;background:var(--tan);color:var(--wine-deep);border-radius:32px;padding:8px;box-shadow:0 10px 30px rgba(0,0,0,.1)}
+.mod-in{background:var(--wine-deep);color:var(--cream);border-radius:24px;padding:26px 20px;height:100%}
+.mod .ico{width:50px;height:50px;border-radius:50%;background:var(--green-hi);color:#10341a;display:grid;place-items:center;margin:0 auto 14px;box-shadow:0 4px 12px rgba(142,224,138,.3)}
+.mod .ico svg{width:24px;height:24px}
+.mod h3{font-size:20px;margin-bottom:8px;color:var(--cream)}
+.mod ul{list-style:none;display:grid;gap:6px;font-size:15px;font-weight:600;color:rgba(255,255,255,.85)}
+.bonus-band{margin:clamp(36px,6vw,56px) auto 0;max-width:800px;border-radius:34px;background:var(--gold);color:var(--wine-deep);padding:clamp(26px,4vw,40px);box-shadow:10px 10px 0 var(--wine-deep)}
+.bonus-band h3{margin-bottom:16px}
+.bonus-band .bn{display:grid;gap:14px}
+@media(min-width:760px){.bonus-band .bn{grid-template-columns:1fr 1fr}}
+.bonus-band .bn div{background:rgba(255,255,255,.6);border-radius:20px;padding:18px}
+.bonus-band b{display:block;font-weight:800;font-size:17px;margin-bottom:4px}
+.bonus-band span{font-size:15px;font-weight:600}
+
+/* ---------- oferta ---------- */
+.stack{background:#fff;border-radius:32px;padding:clamp(22px,4vw,36px);border:1px solid rgba(68,19,15,.2);max-width:620px;margin-inline:auto;box-shadow:0 10px 30px rgba(0,0,0,.04)}
+.stack-row{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:14px 0;border-bottom:1px dashed rgba(68,19,15,.2);font-size:16px;font-weight:600;text-align:left}
+.stack-row span:last-child{white-space:nowrap;font-weight:800}
+.stack-total{display:flex;justify-content:space-between;gap:16px;margin-top:12px;padding:14px 18px;border-radius:16px;background:var(--wine);color:var(--cream);font-weight:800;text-align:left}
+.offer{margin:clamp(40px,6vw,64px) auto 0;max-width:640px;background:var(--wine);color:var(--cream);border-radius:48px;padding:clamp(36px,6vw,56px) clamp(20px,4vw,44px);position:relative;border:3px solid var(--tan);box-shadow:0 0 0 8px var(--wine-deep),0 20px 40px rgba(0,0,0,.4)}
+.offer .seal-off{top:-56px;right:-4px}
+.offer p{color:var(--cream)!important}
+.offer h3{font-family:var(--serif);font-weight:600;font-style:italic;font-size:clamp(26px,5vw,36px);margin-bottom:6px}
+.offer .was{font-size:18px;font-weight:600;opacity:.85}
+.offer .now{font-size:clamp(76px,20vw,116px);font-weight:900;line-height:1;margin:8px 0;color:#fff}
+.offer .now sup{font-size:.28em;vertical-align:top;position:relative;top:.55em;margin-right:6px;font-weight:700}
+.offer .now small{font-size:.28em;font-weight:700}
+.offer .pay{font-size:16px;font-weight:600;margin-bottom:24px}
+.offer .btn{width:100%;max-width:420px}
+.trust{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 22px;margin-top:26px;font-size:13px;font-weight:700}
+.trust li{list-style:none;display:flex;gap:6px;align-items:center}
+.trust svg{width:18px;height:18px;color:var(--tan-soft)}
+.countdown{display:none;justify-content:center;gap:8px;margin:0 0 20px}
+.countdown.on{display:flex}
+.countdown div{background:var(--wine-deep);border-radius:14px;padding:8px 12px;min-width:60px}
+.countdown b{display:block;font-size:26px;line-height:1.1;font-weight:900}
+.countdown span{font-size:10px;font-weight:700;letter-spacing:.08em;opacity:.8}
+
+/* ---------- garantia ---------- */
+.guarantee{max-width:700px;margin-inline:auto;display:grid;gap:24px;justify-items:center}
+.seal{width:140px;height:140px;border-radius:50%;background:var(--wine);color:var(--cream);display:grid;place-items:center;border:4px double var(--gold);box-shadow:0 0 0 6px var(--wine-deep)}
+.seal b{font-size:54px;line-height:1;font-weight:900;display:block}
+.seal span{font-size:12px;font-weight:800;letter-spacing:.1em}
+
+/* ---------- pra quem é ---------- */
+.fit{display:grid;gap:18px;max-width:880px;margin-inline:auto}
+@media(min-width:800px){.fit{grid-template-columns:1fr 1fr}}
+.fit>div{border-radius:32px;padding:30px 24px}
+.fit .yes{background:var(--wine);color:var(--cream);box-shadow:0 10px 30px rgba(68,19,15,.25)}
+.fit .no{background:#fff;color:var(--wine);border:1px dashed rgba(68,19,15,.3)}
+.fit h3{margin-bottom:18px}
+.fit ul{list-style:none;display:grid;gap:12px;justify-items:center}
+.fit li{display:flex;gap:12px;align-items:center;justify-content:center;text-align:left;font-weight:600;font-size:16px}
+.fit li svg{width:24px;height:24px;flex:none}
+.fit .no li svg{color:#d9534f}
+
+/* ---------- FAQ ---------- */
+.faq details{background:#161616;border:1px solid #333;border-radius:22px;margin-bottom:12px;padding:0 24px;text-align:center;box-shadow:0 8px 20px rgba(0,0,0,.2);transition:border-color .2s}
+.faq details[open]{border-color:var(--tan);background:#1e1412}
+.faq summary{cursor:pointer;list-style:none;font-weight:800;font-size:clamp(16px,3.5vw,20px);padding:20px 28px;position:relative;color:var(--cream)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:0;top:50%;transform:translateY(-50%);width:28px;height:28px;line-height:26px;border-radius:50%;background:var(--tan);color:var(--wine-deep);font-weight:800;font-size:20px;transition:transform .25s}
+.faq details[open] summary::after{transform:translateY(-50%) rotate(45deg)}
+.faq details p{padding:0 0 22px;color:rgba(255,255,255,.85)!important}
+
+/* ---------- final ---------- */
+.final h2{margin-bottom:20px}
+.final .arch-top{position:absolute;left:50%;top:0;transform:translateX(-50%);width:min(500px,90%);height:120px;background:var(--wine-bright);border-radius:0 0 999px 999px;z-index:0}
+.final .wrap,.final .narrow{padding-top:36px}
+
+footer{background:var(--black);color:rgba(255,255,255,.65);padding:46px 0 32px;font-size:12px;line-height:1.7;font-weight:500}
+footer .links{display:flex;gap:10px 24px;flex-wrap:wrap;justify-content:center;margin-bottom:18px}
+footer a{color:var(--cream);font-weight:700}
+footer p{margin-bottom:10px;max-width:80ch}
+
+/* ---------- barra fixa de conversão ---------- */
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:55;padding:10px 16px calc(10px + var(--safe-b));background:var(--wine-deep);border-top:2px solid var(--tan);display:flex;align-items:center;justify-content:center;gap:16px;transform:translateY(110%);transition:transform .3s ease;box-shadow:0 -10px 30px rgba(0,0,0,.4)}
+.sticky.show{transform:none}
+.sticky .p{flex:none;line-height:1.05;color:var(--cream);text-align:center}
+.sticky .p s{font-size:11px;opacity:.65;display:block;font-weight:600}
+.sticky .p b{font-size:24px;font-weight:900}
+.sticky .btn{flex:1;max-width:320px;padding:14px 12px;min-height:52px;font-size:13px;box-shadow:0 5px 0 -1px var(--green-dark)}
+
+/* ---------- animações e utilitários de rolagem ---------- */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}
+.reveal.in{opacity:1;transform:none}
+.reveal.pop{transform:scale(.95)}
+.reveal.pop.in{transform:none}
+.reveal.fl{transform:translateX(-28px)}
+.reveal.fr{transform:translateX(28px)}
+.reveal.fl.in,.reveal.fr.in{transform:none}
+
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .reveal{opacity:1;transform:none}
+  .hero h1 .ln>span{transform:none}
+}
+</style>
+</head>
+
+<body>
+
+<!-- ícones reutilizáveis (Notion style & organização) -->
+<svg class="sprite" aria-hidden="true">
+  <symbol id="ck" viewBox="0 0 28 28"><circle cx="14" cy="14" r="14" fill="#8ee08a"/><path d="M8 14.5l4 4 8-9" fill="none" stroke="#10341a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="xx" viewBox="0 0 28 28"><circle cx="14" cy="14" r="14" fill="currentColor"/><path d="M9 9l10 10M19 9L9 19" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/></symbol>
+  <symbol id="ck-line" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="notion-ico" viewBox="0 0 24 24"><path fill="currentColor" d="M4.456 3.109a1.75 1.75 0 0 0-1.456.891l-2 3.5a1.75 1.75 0 0 0 .25 1.957l8 10a1.75 1.75 0 0 0 1.365.652h4.635a1.75 1.75 0 0 0 1.456-.891l2-3.5a1.75 1.75 0 0 0-.25-1.957l-8-10a1.75 1.75 0 0 0-1.365-.652H4.456z"/></symbol>
+</svg>
+
+<!-- FAIXA DE TOPO -->
+<div class="ticker" role="region" aria-label="Oferta">
+  <div class="ticker-track" id="tickerTrack"></div>
+</div>
+
+<main>
+
+<!-- HERO -->
+<section class="hero" id="topo">
+  <div class="wrap">
+    <span class="pill reveal"><svg width="14" height="14"><use href="#notion-ico"/></svg> O segundo cérebro para o seu Glow Up em 2027</span>
+    <h1>
+      <span class="ln"><span style="--i:0">Chega de promessas vazias.</span></span>
+      <span class="ln"><span style="--i:1">Prepare-se para o seu melhor ano.</span></span>
+      <span class="ln"><span style="--i:2" class="serif">O seu 2027 começa agora.</span></span>
+    </h1>
+    <p class="lead reveal" style="--d:.4s">O <strong>Life Planner 2027</strong> é o Notion definitivo que une sua <strong>rotina, estudos, treinos, finanças e metas</strong> em um painel inteligente. Abra, escolha o que fazer e execute com clareza em 5 minutos por dia.</p>
+
+    <div class="reveal" style="--d:.55s">
+      <div class="hero-price">
+        <s data-old>R$ 197,90</s>
+        <strong data-price>R$ 47</strong>
+        <small>pagamento único · acesso vitalício para 2027 e além</small>
+      </div>
+      <a href="#" class="btn pulse" data-checkout data-cta="hero">Quero garantir meu 2027 <span class="arrow">&rarr;</span></a>
+      <p class="micro">Acesso imediato no seu e-mail · Garantia incondicional de 7 dias</p>
+      <div class="chips">
+        <span class="chip"><svg><use href="#ck"/></svg>Celular, Tablet e PC</span>
+        <span class="chip"><svg><use href="#ck"/></svg>100% pronto (Sem precisar saber Notion)</span>
+        <span class="chip"><svg><use href="#ck"/></svg>Bônus exclusivos inclusos</span>
+      </div>
+    </div>
+
+    <div class="hero-art reveal pop" style="--d:.35s">
+      <div class="seal-off"><div><b data-off>76%</b><span>OFF</span></div></div>
+      <div class="media arch side" data-slot="hero-foto-1"><div class="ph"><b>Foto 1</b><span>Mesa organizada.</span><i>9:16</i></div></div>
+      <div class="phone"><div class="media" data-slot="hero-video"><div class="ph"><b>Preview do Planner</b><span>Vídeo rápido em loop.</span><i>9:16</i></div></div></div>
+      <div class="media arch side" data-slot="hero-foto-2"><div class="ph"><b>Foto 2</b><span>Rotina e café.</span><i>9:16</i></div></div>
+    </div>
+  </div>
+  <svg class="wave" viewBox="0 0 1440 60" preserveAspectRatio="none" style="fill:var(--wine)"><path d="M0 60V28C240 -4 480 -4 720 24S1200 56 1440 18V60Z"/></svg>
+</section>
+
+<!-- DOR / REALIDADE -->
+<section class="s-wine" id="dor">
+  <div class="blob" style="width:320px;height:320px;background:var(--wine-bright);left:-120px;top:-100px;opacity:.6"></div>
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 class="caps">Sua ambição é gigante,<br>mas sua rotina <span class="serif">está travada?</span></h2>
+      <p class="lead">Você quer fazer de 2027 o seu ano de transformação, mas o excesso de ideias sem estrutura paralisa qualquer progresso.</p>
+    </div>
+    <div class="pain-grid">
+      <div class="pain reveal"><svg><use href="#xx"/></svg><p>Acorda sem rumo certo e perde as primeiras horas do dia no caos</p></div>
+      <div class="pain reveal" style="--d:.06s"><svg><use href="#xx"/></svg><p>Sente ansiedade por ter milhares de tarefas espalhadas em aplicativos diferentes</p></div>
+      <div class="pain reveal" style="--d:.12s"><svg><use href="#xx"/></svg><p>Adia metas de saúde, treinos e estudos acumulando frustração</p></div>
+      <div class="pain reveal" style="--d:.18s"><svg><use href="#xx"/></svg><p>Salva vídeos de organização estética no Instagram e nunca aplica nada</p></div>
+      <div class="pain reveal" style="--d:.24s"><svg><use href="#xx"/></svg><p>Perde prazos, datas importantes e controle do próprio dinheiro</p></div>
+      <div class="pain reveal" style="--d:.3s"><svg><use href="#xx"/></svg><p>Compra agendas físicas todo ano que acabam abandonadas em fevereiro</p></div>
+    </div>
+
+    <div class="pivot reveal pop">
+      <h3 class="caps">A culpa não é sua. É falta de sistema.</h3>
+      <p>Para atingir suas metas de 2027 e viver seu <strong>glow up</strong> real, você não precisa de mais força de vontade bruta. Você precisa de um ecossistema inteligente, minimalista e automatizado que faça o trabalho pesado por você.</p>
+    </div>
+  </div>
+  <svg class="wave" viewBox="0 0 1440 60" preserveAspectRatio="none" style="fill:var(--cream)"><path d="M0 60V20C300 60 520 0 800 28S1230 50 1440 14V60Z"/></svg>
+</section>
+
+<!-- SISTEMA / PILARES (ABAS COM ÍCONES NOTION) -->
+<section class="s-cream" id="sistema">
+  <div class="blob" style="width:280px;height:280px;background:var(--rose);right:-100px;top:40px;opacity:.5"></div>
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="pill"><svg width="14" height="14"><use href="#notion-ico"/></svg> Tudo integrado no Notion</span>
+      <h2>Seu 2027 desenhado<br>em um <span class="serif">Sistema de Alta Performance</span></h2>
+      <p class="lead">Projetado com princípios avançados de UX/UI para ser esteticamente impecável e absurdamente intuitivo.</p>
+    </div>
+
+    <div class="tabs reveal" role="tablist" aria-label="Áreas do planner">
+      <button class="tab" role="tab" aria-selected="true" data-t="0">📋 Rotina & Dia a Dia</button>
+      <button class="tab" role="tab" aria-selected="false" data-t="1">🎯 Metas & Vision Board</button>
+      <button class="tab" role="tab" aria-selected="false" data-t="2">✨ Glow Up & Saúde</button>
+      <button class="tab" role="tab" aria-selected="false" data-t="3">📚 Estudos & Carreira</button>
+      <button class="tab" role="tab" aria-selected="false" data-t="4">💰 Finanças 2027</button>
+    </div>
+
+    <div class="panel on" data-p="0">
+      <div>
+        <span class="pill">Rotina Diária</span>
+        <h3>Comece o dia com clareza absoluta</h3>
+        <p>Visão inteligente conectando seu planejamento semanal, diário e mensal em uma única tela fluida e sem distrações.</p>
+        <ul>
+          <li><svg class="ck"><use href="#ck"/></svg>Checklists automáticos da semana</li>
+          <li><svg class="ck"><use href="#ck"/></svg>Rotinas matinais e noturnas otimizadas</li>
+          <li><svg class="ck"><use href="#ck"/></svg>Painel dinâmico de tarefas prioritárias</li>
+        </ul>
+      </div>
+      <div class="media arch" data-slot="pilar-rotina"><div class="ph"><b>Rotina</b><span>Preview do painel diário.</span><i>9:16</i></div></div>
+    </div>
+
+    <div class="panel" data-p="1">
+      <div>
+        <span class="pill">Metas & Vision Board</span>
+        <h3>Transforme sonhos em planos executáveis</h3>
+        <p>Alinhe suas grandes aspirações para 2027 e visualize seu progresso passo a passo por meio de painéis visuais inspiradores.</p>
+        <ul>
+          <li><svg class="ck"><use href="#ck"/></svg>Metas divididas em trimestres</li>
+          <li><svg class="ck"><use href="#ck"/></svg>Vision board digital integrado</li>
+          <li><svg class="ck"><use href="#ck"/></svg>Decomposição de metas em hábitos diários</li>
+        </ul>
+      </div>
+      <div class="media arch" data-slot="pilar-metas"><div class="ph"><b>Metas</b><span>Vision Board.</span><i>9:16</i></div></div>
+    </div>
+
+    <div class="panel" data-p="2">
+      <div>
+        <span class="pill">Glow Up & Saúde</span>
+        <h3>Consistência que dá prazer em manter</h3>
+        <p>Monitore sua evolução física, mental e estética com rastreadores inteligentes que transformam hábitos saudáveis em rotina automática.</p>
+        <ul>
+          <li><svg class="ck"><use href="#ck"/></svg>Habit tracker diário interativo</li>
+          <li><svg class="ck"><use href="#ck"/></svg>Planejador de treinos e skincare</li>
+          <li><svg class="ck"><use href="#ck"/></svg>Leituras e autocuidado em dia</li>
+        </ul>
+      </div>
+      <div class="media arch" data-slot="pilar-saude"><div class="ph"><b>Glow Up</b><span>Habit Tracker.</span><i>9:16</i></div></div>
+    </div>
+
+    <div class="panel" data-p="3">
+      <div>
+        <span class="pill">Estudos & Carreira</span>
+        <h3>Domine seus prazos sem estresse</h3>
+        <p>Um ambiente estruturado para gerenciar seus projetos profissionais, cursos, cronogramas de provas e referências importantes.</p>
+        <ul>
+          <li><svg class="ck"><use href="#ck"/></svg>Cronograma de estudos e entregas</li>
+          <li><svg class="ck"><use href="#ck"/></svg>Controle de aulas e resumos</li>
+          <li><svg class="ck"><use href="#ck"/></svg>Repositório de links e materiais</li>
+        </ul>
+      </div>
+      <div class="media arch" data-slot="pilar-estudos"><div class="ph"><b>Estudos</b><span>Área acadêmica.</span><i>9:16</i></div></div>
+    </div>
+
+    <div class="panel" data-p="4">
+      <div>
+        <span class="pill">Finanças 2027</span>
+        <h3>Controle financeiro sem planilhas chatas</h3>
+        <p>Acompanhe entradas, despesas e investimentos de forma visual e intuitiva para alcançar sua estabilidade financeira em 2027.</p>
+        <ul>
+          <li><svg class="ck"><use href="#ck"/></svg>Fluxo de caixa simplificado</li>
+          <li><svg class="ck"><use href="#ck"/></svg>Metas de economia e viagens</li>
+          <li><svg class="ck"><use href="#ck"/></svg>Gestão de gastos essenciais e supérfluos</li>
+        </ul>
+      </div>
+      <div class="media arch" data-slot="pilar-financas"><div class="ph"><b>Finanças</b><span>Painel financeiro.</span><i>9:16</i></div></div>
+    </div>
+
+    <div class="reveal" style="margin-top:46px">
+      <a href="#" class="btn" data-checkout data-cta="sistema">Quero estruturar meu 2027 <span class="arrow">&rarr;</span></a>
+    </div>
+  </div>
+  <svg class="wave" viewBox="0 0 1440 60" preserveAspectRatio="none" style="fill:var(--black)"><path d="M0 60V30C260 0 460 56 740 26S1220 0 1440 30V60Z"/></svg>
+</section>
+
+<!-- ANTES X DEPOIS -->
+<section class="s-black" id="contraste">
+  <div class="blob" style="width:350px;height:350px;background:var(--wine);left:50%;top:-180px;transform:translateX(-50%);opacity:.7"></div>
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 class="caps">Como será o seu ano<br>com a <span class="serif">escolha certa</span></h2>
+      <p class="lead">Veja a diferença real na sua rotina ao adotar um sistema estruturado para 2027.</p>
+    </div>
+    <div class="vs">
+      <div class="vs-card vs-bad reveal fl">
+        <h3 class="caps">Sem o Life Planner</h3>
+        <ul>
+          <li><svg><use href="#xx"/></svg>Dias guiados pelo improviso e cansaço</li>
+          <li><svg><use href="#xx"/></svg>Prazos importantes esquecidos na gaveta</li>
+          <li><svg><use href="#xx"/></svg>Academia e hábitos abandonados logo em janeiro</li>
+          <li><svg><use href="#xx"/></svg>Dinheiro sumindo sem rumo definido</li>
+          <li><svg><use href="#xx"/></svg>Metas apenas na imaginação</li>
+        </ul>
+      </div>
+      <div class="vs-card vs-good reveal fr">
+        <h3 class="caps">Com o Life Planner 2027</h3>
+        <ul>
+          <li><svg><use href="#ck"/></svg>Você abre o Notion e sabe exatamente o que fazer</li>
+          <li><svg><use href="#ck"/></svg>Provas, projetos e contas sob controle total</li>
+          <li><svg><use href="#ck"/></svg>Consistência diária que vira hábito</li>
+          <li><svg><use href="#ck"/></svg>Clareza financeira absoluta</li>
+          <li><svg><use href="#ck"/></svg>Metas de 2027 virando realidade</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <svg class="wave" viewBox="0 0 1440 60" preserveAspectRatio="none" style="fill:var(--wine-deep)"><path d="M0 60V22C220 58 520 -2 760 24S1240 52 1440 16V60Z"/></svg>
+</section>
+
+<!-- TOUR -->
+<section class="s-deep" id="tour">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="pill"><svg width="14" height="14"><use href="#notion-ico"/></svg> Tour por dentro</span>
+      <h2 class="serif" style="font-size:clamp(32px,7.5vw,56px);line-height:1.1">Conheça cada detalhe<br>antes de <span style="font-style:normal">começar</span></h2>
+      <p class="lead">Navegação fluida, visual sofisticado e máxima praticidade para o seu dia a dia.</p>
+    </div>
+    <div class="tour-row">
+      <div class="media arch side reveal fl" data-slot="tour-foto-1"><div class="ph"><b>Mobile</b><span>Visão no celular.</span><i>9:16</i></div></div>
+      <div class="phone main reveal pop"><div class="media" data-slot="tour-video"><div class="ph"><b>Vídeo Tour</b><span>Demonstração completa.</span><i>9:16</i></div></div></div>
+      <div class="media arch side reveal fr" data-slot="tour-foto-2"><div class="ph"><b>Desktop</b><span>Visão no notebook.</span><i>9:16</i></div></div>
+    </div>
+    <div class="reveal" style="margin-top:48px">
+      <a href="#" class="btn" data-checkout data-cta="tour">Quero meu Glow Up 2027 <span class="arrow">&rarr;</span></a>
+    </div>
+  </div>
+  <svg class="wave" viewBox="0 0 1440 60" preserveAspectRatio="none" style="fill:var(--tan)"><path d="M0 60V26C240 56 500 2 760 28S1200 54 1440 20V60Z"/></svg>
+</section>
+
+<!-- PROVAS SOCIAIS -->
+<section class="s-tan" id="provas">
+  <div class="blob" style="width:300px;height:300px;background:var(--tan-soft);right:-100px;bottom:30px;opacity:.5"></div>
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>Quem já usa<br><span class="serif">transformou a rotina</span></h2>
+    </div>
+    <div class="proof-grid">
+      <figure class="quote reveal">
+        <div class="mark">“</div>
+        <blockquote>A área de estudos e prazos salvou meu semestre. Eu vivia perdida com datas e entregas. Agora está tudo impecável no Notion.</blockquote>
+        <cite>Cliente verificada · Instagram</cite>
+        <span class="result">Organização total</span>
+      </figure>
+      <figure class="quote reveal" style="--d:.08s">
+        <div class="mark">“</div>
+        <blockquote>Pela primeira vez consegui manter constância nos treinos e skincare por meses seguidos. O rastreador dá gosto de usar todo dia!</blockquote>
+        <cite>Cliente verificada · Instagram</cite>
+        <span class="result">Glow up real</span>
+      </figure>
+      <figure class="quote reveal" style="--d:.16s">
+        <div class="mark">“</div>
+        <blockquote>Eu tinha medo de comprar por não saber mexer no Notion, mas a aula bônus ensina tudo de forma super simples.</blockquote>
+        <cite>Cliente verificada · Instagram</cite>
+        <span class="result">Fácil de usar</span>
+      </figure>
+    </div>
+    <div class="print-row reveal">
+      <div class="media" data-slot="print-1"><div class="ph"><b>Print 1</b></div></div>
+      <div class="media" data-slot="print-2"><div class="ph"><b>Print 2</b></div></div>
+      <div class="media" data-slot="print-3"><div class="ph"><b>Print 3</b></div></div>
+    </div>
+  </div>
+  <svg class="wave" viewBox="0 0 1440 60" preserveAspectRatio="none" style="fill:var(--grey)"><path d="M0 60V18C280 54 540 4 800 30S1250 50 1440 12V60Z"/></svg>
+</section>
+
+<!-- COMO FUNCIONA -->
+<section class="s-grey" id="como">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>Pronto em <span class="serif">5 minutos</span></h2>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><div class="n">1</div><h3>Garanta seu acesso</h3><p>Pagamento rápido e seguro por PIX ou cartão com liberação imediata.</p></div>
+      <div class="step reveal" style="--d:.08s"><div class="n">2</div><h3>Receba no e-mail</h3><p>O link de acesso ao template do Notion chega na sua caixa de entrada na mesma hora.</p></div>
+      <div class="step reveal" style="--d:.16s"><div class="n">3</div><h3>Duplique e comece</h3><p>Um clique para adicionar ao seu Notion e iniciar seu planejamento para 2027.</p></div>
+    </div>
+  </div>
+  <svg class="wave" viewBox="0 0 1440 60" preserveAspectRatio="none" style="fill:var(--wine)"><path d="M0 60V24C260 56 480 -2 760 26S1220 54 1440 18V60Z"/></svg>
+</section>
+
+<!-- O QUE TEM DENTRO -->
+<section class="s-wine" id="dentro">
+  <div class="blob" style="width:340px;height:340px;background:var(--wine-bright);left:-140px;bottom:-50px;opacity:.6"></div>
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 class="serif" style="font-size:clamp(34px,8vw,60px);line-height:1.08">Tudo o que você<br><span style="font-style:normal">desbloqueia hoje</span></h2>
+    </div>
+    <div class="inside">
+      <div class="mod reveal"><div class="mod-in"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></svg></div><h3>Dashboard Principal</h3><ul><li>Visão geral do dia e da semana</li><li>Atalhos rápidos integrados</li></ul></div></div>
+      <div class="mod reveal" style="--d:.05s"><div class="mod-in"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 11h18"/></svg></div><h3>Planejamento 2027</h3><ul><li>Agenda diária, semanal e mensal</li><li>Checklists inteligentes</li></ul></div></div>
+      <div class="mod reveal" style="--d:.1s"><div class="mod-in"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8z"/></svg></div><h3>Glow Up & Hábitos</h3><ul><li>Habit tracker e rotinas</li><li>Leituras e autocuidado</li></ul></div></div>
+      <div class="mod reveal" style="--d:.15s"><div class="mod-in"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5z"/><path d="M4 19.5V21h16"/></svg></div><h3>Estudos & Carreira</h3><ul><li>Gerenciador de tarefas</li><li>Resumos e links úteis</li></ul></div></div>
+      <div class="mod reveal" style="--d:.2s"><div class="mod-in"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M14.5 9.2c-.6-.8-1.5-1.2-2.5-1.2-1.4 0-2.5.8-2.5 2s1 1.7 2.5 2 2.5.8 2.5 2-1.1 2-2.5 2c-1 0-1.9-.4-2.5-1.2M12 6v2M12 16v2"/></svg></div><h3>Finanças Organizadas</h3><ul><li>Controle de gastos e ganhos</li><li>Zero planilhas complexas</li></ul></div></div>
+      <div class="mod reveal" style="--d:.25s"><div class="mod-in"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 2.6 5.6 6.1.7-4.5 4.2 1.2 6L12 16.5 6.6 19.5l1.2-6L3.3 9.3l6.1-.7z"/></svg></div><h3>Vision Board Digital</h3><ul><li>Seus sonhos visíveis</li><li>Metas acionáveis</li></ul></div></div>
+    </div>
+
+    <div class="bonus-band reveal pop">
+      <h3 class="caps"><svg width="16" height="16" style="vertical-align:-2px"><use href="#notion-ico"/></svg> Bônus Exclusivos Inclusos</h3>
+      <div class="bn">
+        <div><b>Bônus 1 · Pack Aesthetic</b><span>Ícones, widgets e capas exclusivos para personalizar o seu Notion.</span></div>
+        <div><b>Bônus 2 · Notion do Zero à Prática</b><span>Aula passo a passo para dominar a ferramenta em poucos minutos.</span></div>
+      </div>
+    </div>
+  </div>
+  <svg class="wave" viewBox="0 0 1440 60" preserveAspectRatio="none" style="fill:var(--cream)"><path d="M0 60V20C300 58 540 2 800 28S1240 50 1440 14V60Z"/></svg>
+</section>
+
+<!-- OFERTA -->
+<section class="s-cream" id="oferta">
+  <div class="blob" style="width:320px;height:320px;background:var(--rose);left:-120px;top:70px;opacity:.4"></div>
+  <div class="narrow">
+    <div class="sec-head reveal">
+      <h2>Quanto custaria montar<br>tudo isso <span class="serif">separado?</span></h2>
+    </div>
+    <div class="stack reveal">
+      <div class="stack-row"><span>App de controle financeiro</span><span>~ R$ 49,90/ano</span></div>
+      <div class="stack-row"><span>App de treino e hábitos</span><span>~ R$ 29,90/mês</span></div>
+      <div class="stack-row"><span>Planner físico aesthetic</span><span>~ R$ 80,00</span></div>
+      <div class="stack-row" style="border-bottom:0"><span>Gestor de estudos e metas</span><span>~ R$ 39,90</span></div>
+      <div class="stack-total"><span>Em ferramentas separadas</span><span>+ de R$ 199,00</span></div>
+    </div>
+
+    <div class="offer reveal pop" id="compra">
+      <div class="seal-off"><div><b data-off>76%</b><span>OFF</span></div></div>
+      <h3>Life Planner 2027 Vitalício</h3>
+      <div class="countdown" id="countdown">
+        <div><b id="cd-d">00</b><span>DIAS</span></div><div><b id="cd-h">00</b><span>HORAS</span></div><div><b id="cd-m">00</b><span>MIN</span></div><div><b id="cd-s">00</b><span>SEG</span></div>
+      </div>
+      <div class="was">de <s data-old>R$ 197,90</s> por apenas</div>
+      <div class="now"><sup>R$</sup><span data-price-num>47</span><small>,00</small></div>
+      <p class="pay">Pagamento único. Sem mensalidades. Acesso vitalício a todas as atualizações futuras. Menos que um jantar.</p>
+      <a href="#" class="btn pulse" data-checkout data-cta="oferta">Quero transformar meu 2027 <span class="arrow">&rarr;</span></a>
+      <ul class="trust">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg>100% online</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Checkout seguro</li>
+        <li><svg><use href="#ck-line"/></svg>Acesso vitalício</li>
+      </ul>
+    </div>
+  </div>
+  <svg class="wave" viewBox="0 0 1440 60" preserveAspectRatio="none" style="fill:var(--tan)"><path d="M0 60V26C260 -2 500 54 760 26S1200 6 1440 30V60Z"/></svg>
+</section>
+
+<!-- GARANTIA -->
+<section class="s-tan" id="garantia">
+  <div class="narrow">
+    <div class="guarantee reveal">
+      <div class="seal"><div><b>7</b><span>DIAS DE<br>GARANTIA</span></div></div>
+      <div>
+        <h2 style="font-size:clamp(26px,5vw,38px);margin-bottom:12px">Teste <span class="serif">sem risco</span></h2>
+        <p class="lead" style="color:var(--wine-deep)">Explore o template por 7 dias inteiros. Se você sentir que ele não revolucionou sua organização, basta pedir o reembolso e devolvemos cada centavo. Sem perguntas e sem burocracia.</p>
+      </div>
+    </div>
+  </div>
+  <svg class="wave" viewBox="0 0 1440 60" preserveAspectRatio="none" style="fill:var(--grey)"><path d="M0 60V20C240 56 520 0 780 28S1230 48 1440 14V60Z"/></svg>
+</section>
+
+<!-- PARA QUEM É -->
+<section class="s-grey" id="fit">
+  <div class="wrap">
+    <div class="sec-head reveal"><h2>O Life Planner 2027 é<br>perfeito para você <span class="serif">se…</span></h2></div>
+    <div class="fit">
+      <div class="yes reveal fl">
+        <h3 class="caps">É para você se:</h3>
+        <ul>
+          <li><svg><use href="#ck"/></svg>Estuda, trabalha ou empreende e quer tudo em um só lugar</li>
+          <li><svg><use href="#ck"/></svg>Quer construir disciplina e viver o seu melhor glow up em 2027</li>
+          <li><svg><use href="#ck"/></svg>Ama um visual estético, limpo e altamente funcional</li>
+          <li><svg><use href="#ck"/></svg>Nunca usou o Notion mas quer começar do jeito certo</li>
+        </ul>
+      </div>
+      <div class="no reveal fr">
+        <h3 class="caps">Não é para você se:</h3>
+        <ul>
+          <li><svg><use href="#xx"/></svg>Apenas aceita planners em formato de papel físico</li>
+          <li><svg><use href="#xx"/></svg>Espera alcançar grandes resultados sem usar nenhum sistema</li>
+          <li><svg><use href="#xx"/></svg>Não tem interesse em evoluir sua rotina este ano</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <svg class="wave" viewBox="0 0 1440 60" preserveAspectRatio="none" style="fill:var(--black)"><path d="M0 60V28C280 58 520 0 790 26S1240 52 1440 16V60Z"/></svg>
+</section>
+
+<!-- FAQ -->
+<section class="s-black faq" id="faq">
+  <div class="narrow">
+    <div class="sec-head reveal"><h2 class="serif" style="font-size:clamp(32px,7.5vw,52px)">Dúvidas <span style="font-style:normal">frequentes</span></h2></div>
+    <details class="reveal"><summary>Preciso pagar pelo Notion?</summary><p>Não. O Notion possui um plano gratuito excelente que é mais do que suficiente para você duplicar e utilizar todo o Life Planner sem custos adicionais.</p></details>
+    <details class="reveal"><summary>Preciso saber usar o Notion antes?</summary><p>Zero experiência necessária! O planner já vem pronto para uso, e você ainda recebe o bônus exclusivo "Notion do Zero à Prática" para aprender os comandos básicos em poucos minutos.</p></details>
+    <details class="reveal"><summary>Funciona no celular?</summary><p>Sim! Funciona perfeitamente no aplicativo do Notion para iPhone e Android, além de tablets e computadores, sincronizando tudo em tempo real.</p></details>
+    <details class="reveal"><summary>Vou receber algum produto físico?</summary><p>Não. O produto é 100% digital. Assim que o pagamento é aprovado, você recebe o link de acesso diretamente no seu e-mail.</p></details>
+    <details class="reveal"><summary>O pagamento é único ou mensalidade?</summary><p>O pagamento é único. Você paga apenas uma vez e tem acesso vitalício ao Life Planner 2027, incluindo todas as atualizações futuras.</p></details>
+    <details class="reveal"><summary>E se eu não gostar?</summary><p>Você tem 7 dias de garantia incondicional. Caso queira o reembolso, basta solicitar por e-mail e devolveremos seu dinheiro integralmente.</p></details>
+  </div>
+  <svg class="wave" viewBox="0 0 1440 60" preserveAspectRatio="none" style="fill:var(--wine)"><path d="M0 60V22C260 56 500 0 770 26S1220 52 1440 16V60Z"/></svg>
+</section>
+
+<!-- CTA FINAL -->
+<section class="s-wine final">
+  <div class="arch-top"></div>
+  <div class="narrow">
+    <h2 class="serif reveal" style="font-size:clamp(34px,8vw,60px);line-height:1.08">Daqui a 1 ano, você estará<br>no mesmo lugar...<br><span style="font-style:normal">ou vivendo a rotina dos seus sonhos.</span></h2>
+    <p class="lead reveal" style="--d:.1s;margin:24px auto 32px">A diferença entre continuar no improviso e conquistar o seu glow up em 2027 está a um clique de distância. Garanta seu acesso agora.</p>
+    <div class="reveal" style="--d:.2s">
+      <a href="#" class="btn pulse" data-checkout data-cta="final">Quero meu Life Planner 2027 por <span data-price>R$ 47</span></a>
+      <p class="micro">Pagamento único · Acesso imediato · 7 dias de garantia</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="links">
+      <a href="#" data-slot-link="termos">Termos de uso</a>
+      <a href="#" data-slot-link="privacidade">Política de privacidade</a>
+      <a href="#" data-slot-link="contato">Fale com a gente</a>
+    </div>
+    <p>© 2027 Life Planner · Todos os direitos reservados.</p>
+    <p>Este site não é afiliado, patrocinado ou endossado pelo Notion Labs, Inc. Notion é marca registrada de seus respectivos proprietários. Os resultados variam de pessoa para pessoa e dependem do uso do sistema.</p>
+    <p>Este site não é afiliado ao Facebook, Instagram ou Google.</p>
+  </div>
+</footer>
+
+<!-- BARRA FIXA -->
+<div class="sticky" id="sticky">
+  <div class="p"><s data-old>R$ 197,90</s><b data-price>R$ 47</b></div>
+  <a href="#" class="btn" data-checkout data-cta="sticky">Garantir meu Life Planner 2027</a>
+</div>
+
+<!-- CONFIGURAÇÕES -->
+<script id="config">
+const CONFIG = {
+  CHECKOUT_URL: "https://pay.kiwify.com.br/SetXYzK",
+  PRICE: 47,
+  OLD_PRICE: 197.90,
+  OFFER_END: "",
+  TICKER: [
+    "Planejamento oficial para 2027: <s>{OLD}</s> por <b>{PRICE}</b>",
+    "<b>{OFF}% OFF</b> por tempo limitado",
+    "Acesso <b>vitalício</b> + atualizações",
+    "Bônus: Pack Aesthetic + Aula Notion do Zero",
+    "<b>7 dias</b> de garantia incondicional"
+  ],
+  LINKS: { termos: "#", privacidade: "#", contato: "#" }
+};
+
+const MEDIA = {
+  "videos/video0.mp4": "",
+  "videos/foto1": "",
+  "videos/foto2": "",
+  "pilar-rotina": "",
+  "pilar-metas": "",
+  "pilar-saude": "",
+  "pilar-estudos": "",
+  "pilar-financas": "",
+  "tour-video": "",
+  "tour-foto-1": "",
+  "tour-foto-2": "",
+  "print-1": "",
+  "print-2": "",
+  "print-3": ""
+};
+
+function initTracking(){}
+function trackEvent(name, params){}
+</script>
+
+<script>
+(function(){
+  initTracking();
+  const $ = (s,c=document)=>c.querySelector(s), $$=(s,c=document)=>[...c.querySelectorAll(s)];
+  const fmt = n => Number(n).toLocaleString("pt-BR",{minimumFractionDigits:(n%1?2:0),maximumFractionDigits:2});
+  const PRICE = "R$ "+fmt(CONFIG.PRICE), OLD = "R$ "+fmt(CONFIG.OLD_PRICE);
+  const OFF = Math.round(100 - CONFIG.PRICE / CONFIG.OLD_PRICE * 100);
+
+  $$("[data-price]").forEach(e=>e.textContent = PRICE);
+  $$("[data-price-num]").forEach(e=>e.textContent = fmt(CONFIG.PRICE));
+  $$("[data-old]").forEach(e=>e.textContent = OLD);
+  $$("[data-off]").forEach(e=>e.textContent = OFF+"%");
+
+  const star = '<span class="star"></span>';
+  const one = CONFIG.TICKER.map(t=>'<span class="ticker-item"><span>'+t.replace("{PRICE}",PRICE).replace("{OLD}",OLD).replace("{OFF}",OFF)+'</span>'+star+'</span>').join("");
+  $("#tickerTrack").innerHTML = one+one+one+one;
+
+  const incoming = new URLSearchParams(location.search);
+  const out = new URL(CONFIG.CHECKOUT_URL);
+  ["utm_source","utm_medium","utm_campaign","utm_content","utm_term","fbclid","src","sck"].forEach(k=>{ if(incoming.get(k)) out.searchParams.set(k, incoming.get(k)); });
+  $$("[data-checkout]").forEach(a=>{
+    a.href = out.toString();
+    a.addEventListener("click",()=>trackEvent("checkout",{value:CONFIG.PRICE,currency:"BRL",cta:a.dataset.cta}));
+  });
+  $$("[data-slot-link]").forEach(a=>a.href = CONFIG.LINKS[a.dataset.slotLink] || "#");
+
+  $$(".media[data-slot]").forEach(el=>{
+    const url = (MEDIA[el.dataset.slot]||"").trim();
+    if(!url) return;
+    el.classList.add("filled");
+    if(/youtube\.com\/embed|player\.vimeo/.test(url)){
+      el.innerHTML = '<iframe src="'+url+'" title="Vídeo" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen loading="lazy"></iframe>';
+    } else if(/\.(mp4|webm|mov)(\?|$)/i.test(url)){
+      const loop = el.dataset.slot !== "tour-video";
+      el.innerHTML = '<video src="'+url+'" playsinline '+(loop?'autoplay muted loop':'controls')+' preload="metadata"></video>';
+    } else {
+      el.innerHTML = '<img src="'+url+'" alt="" loading="lazy">';
+    }
+  });
+
+  if(CONFIG.OFFER_END){
+    const end = new Date(CONFIG.OFFER_END).getTime(), box = $("#countdown");
+    const tick=()=>{
+      const d = end-Date.now();
+      if(d<=0){ box.classList.remove("on"); return; }
+      box.classList.add("on");
+      const p=n=>String(n).padStart(2,"0");
+      $("#cd-d").textContent=p(Math.floor(d/864e5));
+      $("#cd-h").textContent=p(Math.floor(d%864e5/36e5));
+      $("#cd-m").textContent=p(Math.floor(d%36e5/6e4));
+      $("#cd-s").textContent=p(Math.floor(d%6e4/1e3));
+    };
+    tick(); setInterval(tick,1000);
+  }
+
+  const tabs=$$(".tab"), panels=$$(".panel");
+  tabs.forEach(t=>t.addEventListener("click",()=>{
+    tabs.forEach(x=>x.setAttribute("aria-selected", x===t));
+    panels.forEach(p=>p.classList.toggle("on", p.dataset.p===t.dataset.t));
+  }));
+
+  if("IntersectionObserver" in window){
+    const io = new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target);} }),{threshold:.1,rootMargin:"0px 0px -5% 0px"});
+    $$(".reveal").forEach(el=>io.observe(el));
+  } else { $$(".reveal").forEach(el=>el.classList.class("in")); }
+
+  const sticky=$("#sticky"), hero=$("#topo"), offer=$("#compra");
+  const upd=()=>{
+    const past = hero.getBoundingClientRect().bottom < 0;
+    const r = offer.getBoundingClientRect();
+    const onOffer = r.top < innerHeight*.85 && r.bottom > 0;
+    sticky.classList.toggle("show", past && !onOffer);
+  };
+  addEventListener("scroll",upd,{passive:true}); upd();
+})();
+</script>
+</body>
+</html>
